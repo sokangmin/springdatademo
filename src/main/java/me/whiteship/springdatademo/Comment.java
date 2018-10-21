@@ -3,10 +3,7 @@ package me.whiteship.springdatademo;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 @Setter
@@ -18,6 +15,17 @@ public class Comment {
 
     private String comment;
 
+    private int likes;
+
     @ManyToOne
     private Post post;
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", comment='" + comment + '\'' +
+                ", likes=" + likes +
+                '}';
+    }
 }

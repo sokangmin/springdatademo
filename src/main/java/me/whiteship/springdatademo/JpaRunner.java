@@ -57,10 +57,10 @@ public class JpaRunner implements ApplicationRunner {
         session.save(post);
 
 
-        /*TypedQuery<Post> query = entityManager.createQuery("select p from Post as p", Post.class);
+        TypedQuery<Post> query = entityManager.createQuery("select p from Post as p", Post.class);
         List<Post> posts = query.getResultList();
 
-        posts.forEach(System.out::println);*/
+        posts.forEach(System.out::println);
 
     }
 }
